@@ -7,7 +7,8 @@ digits = d["data"]
 labels = d["target"]
 
 N = 200
-idx = np.argsort(np.random.random(len(labels))) #2
+# idx = np.argsort(np.random.random(len(labels))) #2
+idx = np.random.permutation(len(labels))
 x_test, y_test = digits[idx[:N]], labels[idx[:N]]
 x_train, y_train = digits[idx[N:]], labels[idx[N:]]
 
